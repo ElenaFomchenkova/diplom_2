@@ -40,7 +40,7 @@ public class UserClient extends RestClient {
                 .then();
     }
 
-    public ValidatableResponse changeUserWithAutorization(ChangeUserRequest changeUserRequest, String token) {
+    public ValidatableResponse changeUserWithAuthorization(ChangeUserRequest changeUserRequest, String token) {
         return given()
                 .spec(getDefaultRequestSpec())
                 .header("Authorization", token)
@@ -49,7 +49,7 @@ public class UserClient extends RestClient {
                 .then();
 
     }
-    public ValidatableResponse changeUserWithoutAutorization(ChangeUserRequest changeUserRequest) {
+    public ValidatableResponse changeUserWithoutAuthorization(ChangeUserRequest changeUserRequest) {
         return given()
                 .spec(getDefaultRequestSpec())
                 .body(changeUserRequest)

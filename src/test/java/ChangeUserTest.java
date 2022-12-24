@@ -49,7 +49,7 @@ public class ChangeUserTest {
     @DisplayName("Changing Email of user")
     public void changeUserEmailTest() {
         ChangeUserRequest changeUserRequest = ChangeUserRequestGenerator.changeEmail(userRequest);
-        userClient.changeUserWithAutorization(changeUserRequest, token)
+        userClient.changeUserWithAuthorization(changeUserRequest, token)
                 .assertThat()
                 .statusCode(SC_OK)
                 .and()
@@ -60,7 +60,7 @@ public class ChangeUserTest {
     @DisplayName("Changing password of user")
     public void changeUserPasswordTest() {
         ChangeUserRequest changeUserRequest = ChangeUserRequestGenerator.changePassword(userRequest);
-        userClient.changeUserWithAutorization(changeUserRequest, token)
+        userClient.changeUserWithAuthorization(changeUserRequest, token)
                 .assertThat()
                 .statusCode(SC_OK)
                 .and()
@@ -71,7 +71,7 @@ public class ChangeUserTest {
     @DisplayName("Changing name of user")
     public void changeUserNameTest() {
         ChangeUserRequest changeUserRequest = ChangeUserRequestGenerator.changeName(userRequest);
-        userClient.changeUserWithAutorization(changeUserRequest, token)
+        userClient.changeUserWithAuthorization(changeUserRequest, token)
                 .assertThat()
                 .statusCode(SC_OK)
                 .and()
@@ -82,7 +82,7 @@ public class ChangeUserTest {
     @DisplayName("Changing email of user without authorization impossible")
     public void changeUserEmailTestWithoutAutorazation() {
         ChangeUserRequest changeUserRequest = ChangeUserRequestGenerator.changeEmail(userRequest);
-        userClient.changeUserWithoutAutorization(changeUserRequest)
+        userClient.changeUserWithoutAuthorization(changeUserRequest)
                 .assertThat()
                 .statusCode(SC_UNAUTHORIZED)
                 .and()
@@ -93,7 +93,7 @@ public class ChangeUserTest {
     @DisplayName("Changing password of user without authorization impossible")
     public void changeUserPasswordWithoutAutorazationTest() {
         ChangeUserRequest changeUserRequest = ChangeUserRequestGenerator.changePassword(userRequest);
-        userClient.changeUserWithoutAutorization(changeUserRequest)
+        userClient.changeUserWithoutAuthorization(changeUserRequest)
                 .assertThat()
                 .statusCode(SC_UNAUTHORIZED)
                 .and()
@@ -104,7 +104,7 @@ public class ChangeUserTest {
     @DisplayName("Changing name of user without authorization impossible")
     public void changeUserNameWithoutAutorazationTest() {
         ChangeUserRequest changeUserRequest = ChangeUserRequestGenerator.changeName(userRequest);
-        userClient.changeUserWithoutAutorization(changeUserRequest)
+        userClient.changeUserWithoutAuthorization(changeUserRequest)
                 .assertThat()
                 .statusCode(SC_UNAUTHORIZED)
                 .and()
