@@ -1,0 +1,11 @@
+dto\ChangeUserRequest.class
+client\UserClient.class
+dto\OrderRequest.class
+dto\UserRequest.class
+client\OrderClient.class
+config\Config.class
+generator\ChangeUserRequestGenerator.class
+generator\UserRequestGenerator.class
+generator\LoginUserRequestGenerator.class
+dto\LoginUserRequest.class
+client\RestClient.class
